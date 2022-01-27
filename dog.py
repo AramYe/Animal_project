@@ -2,4 +2,8 @@ from animal import Animal
 
 class Dog(Animal):
 
-    pass
+    def show_species(self):
+        print("I am dog")
+
+    def make_sound(self):
+        print(f"Woof! Woof!")
