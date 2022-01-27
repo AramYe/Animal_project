@@ -12,5 +12,26 @@
 # Woof! Woof!
 # I'm an - cat
 # Meow!
-# Book this is not an animal!
+# Book is not an animal!
 
+from animal import Animal
+from dog import Dog
+from cat import Cat
+from book import Book
+
+animal = Animal("Basic")
+dog = Dog("Shepherd")
+cat = Cat("Egyptian")
+book = Book()
+
+animals = [animal, dog, cat, book]
+
+def print_animal_info(some_animal: Animal):
+    if isinstance(some_animal, Animal):
+        some_animal.show_species()
+        some_animal.make_sound()
+    else:
+        some_animal.show_info()
+
+for current_animal in animals:
+    print_animal_info(current_animal)
